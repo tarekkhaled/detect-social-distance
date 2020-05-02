@@ -36,6 +36,10 @@ import json
 ```
 
 ```
+# Imitate REQUEST args (with debugging time, usually ignore)
+# REQUEST = json.dumps({'body': '', 'args': ''})
+```
+```
 # GET /detect/social/distance/ /*This will make route for requesting it */
 
 req = json.loads(REQUEST) /* REQUEST will be defiend globally by kernel gateway*/
