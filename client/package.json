@@ -1,7 +1,7 @@
 {
-  "name": "gui-image-processing",
+  "name": "client",
   "version": "1.0.0",
-  "description": "desktop app for  image processing project (detect-correct-social-distance)",
+  "description": "front-end for detecting social distance project build with electron",
   "main": "index.js",
   "author": "tarek khaled <tarek820@gmail.com>",
   "license": "MIT",
@@ -9,9 +9,6 @@
     "start": "electron ."
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "concurrently": "^5.2.0",
-    "dotenv": "^8.2.0",
     "electron": "^8.2.5"
   }
 }
