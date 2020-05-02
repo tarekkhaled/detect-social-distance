@@ -55,12 +55,10 @@ jupyter kernelgateway --KernelGatewayApp.api='kernel_gateway.notebook_http' --Ke
 
 ```
 
-
 # Contributors 
 [Alaa Atef](https://github.com/Alaa-Atef)
 [Tarek Mohamed](https://github.com/Tarekmohamed97)
 [Mostafa Emam](https://github.com/mostafaahmedemam)
-[Abd Eljalil Nasser](https://github.com/Abd-Eljalil-Nasser)
 
 
 ##### More information will be found in "proposal.pdf"
