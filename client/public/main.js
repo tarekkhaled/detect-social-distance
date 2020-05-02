@@ -13,7 +13,7 @@ async function callJupyterCell(e) {
     if(response.status !== 200) {
         alert('Check the JupyterURL link, the jupyter kernel gateway is running')
     } */
-    execFile('../../backend/webcam.pyc',['--version'],(error,stdout)=>{
+    execFile('../backend/webcam.pyc',['--version'],(error,stdout)=>{
         if(error) throw error;
     })
     
