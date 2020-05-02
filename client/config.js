@@ -1,5 +1,7 @@
 const config = {
-    jupyterURL : 'http://localhost:8888'
+    jupyterURL      : 'http://localhost:8888',
+    jupyterRoute    : '/detect/social/distance',
+    jupyterQuery    : 'start'
 }
 
 
