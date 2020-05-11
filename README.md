@@ -1,19 +1,39 @@
 # Detect-social-distance
 Detect-social-distance is image processing project integrated with electron to slow the spread of coronavirus.
 
-## Front-end
-We use [electron](https://www.electronjs.org/) for GUI and communicating with Jupyter notebook with REST API for starting processing in backend 
+## Overview :
+In our project, we want to help organizations to which a great number people go every day to monitor the distances between people in order to slow the spread of coronavirus.
+These people stand in queues until their turn comes. These queues must not violate the social distancing rules.
+Using a camera, a computer and image processing techniques we try to monitor the distances between people and release warnings if this distance is violated.
 
-### How to start electron app ? _GUI_
+
+### First Approach :
+We use yolo3 for object detection , Yolo return boxes have (width, height) ,(center x , center y) for every boundary box .
+
+'''
+_Note :: for testing you should download (yolo3.weights) from this link: https://pjreddie.com/media/files/yolov3.weights , and locate it in approach1/backend , then open App.exe 
+'''
+#### Calibration :
 
 ```
-cd client/
-npm install or yarn install 
-npm start or yarn start
+Equation 1: focal length = (Z * p_h)/r_h
+```
+_Note :: Z: distance between camera and object , P_h : pixel height , r_h : actual height
+
+focal length , it’s constant parameter for every camera (focal length of webcams around 615 ) 
+from eq1 we compute focal length , by measure real distance between camera and object , actual height of object and pixel height (returned from yolo)
+#### 
+```
+Equation 2 : Z = F * r_h / p_h
 
 ```
-_Note :: config.js is responsible for REST API in electron_
-_Note :: Make Sure the Jupyter notebook is running concurrently with GUI (FOR API)_
+From Equation 2, We can compute distance between cam and each object 
+_Note :: F (it’s constant) , pixel height (returned from yolo ) , we assume actual height of object = average height of person (165cm) 
+Now we have Z for each object , (x , y) (from yolo) , by calculating Euclidean distance :
+```
+Distance between two objects = sqrt(pow(x1-x2,2)+pow(y1-y2,2)+pow(z1-z2,2))
+```
+Then , check if distance between objects less than 1.8 m , boundary box color change from green to red 
 
 ## Backend
 We use [Jupyter Kernel Gateway](https://github.com/jupyter/kernel_gateway) to convert jupyter 
