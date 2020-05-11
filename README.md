@@ -83,7 +83,7 @@ jupyter kernelgateway --KernelGatewayApp.api='kernel_gateway.notebook_http' --Ke
 [Alaa Atef](https://github.com/Alaa-Atef)
 [Tarek Mohamed](https://github.com/Tarekmohamed97)
 [Mostafa Emam](https://github.com/mostafaahmedemam)
-
+[Abd-El Jalil Nasser] (https://github.com/Abd-Eljalil-Nasser)
 
 ##### More information will be found in "proposal.pdf"
 https://github.com/tarekkhaled/detect-social-distance/blob/master/proposal.pdf
