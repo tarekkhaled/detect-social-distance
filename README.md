@@ -51,24 +51,24 @@ now, we have ratio between real distance , and distance in image , so we calcula
 then check distance if less than 1.8 m , we draw red boundary box  ,if more than 1.8m , draw green boundary box .
 
 #### testcases and output :
-Processing 1 images\ 
-image                    shape: (653, 980, 3)         min:    0.00000  max:  255.00000  uint8 \
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 \
-image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 \ 
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 \ 
-233.4390243902439 : 0   :  1 \
-514.560975609756 : 0   :  2 \ 
-682.9024390243902 : 0   :  3 \ 
-281.1219512195122 : 1   :  2 \
-449.4634146341463 : 1   :  3 \ 
-168.34146341463415 : 2   :  3 \ 
-![test 1 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_1.png)
+Processing 1 images<br />
+image                    shape: (653, 980, 3)         min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+233.4390243902439 : 0   :  1 <br />
+514.560975609756 : 0   :  2 <br />
+682.9024390243902 : 0   :  3 <br />
+281.1219512195122 : 1   :  2 <br />
+449.4634146341463 : 1   :  3 <br />
+168.34146341463415 : 2   :  3 <br />
+![test 1 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_1.png) <br />
 
-Processing 1 images
-image                    shape: (675, 1200, 3)        min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
+Processing 1 images <br />
+image                    shape: (675, 1200, 3)        min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64 <br /> 
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br /> 
 183.5560344827586 : 0   :  1
 406.0215517241379 : 0   :  2
 222.4655172413793 : 1   :  2
