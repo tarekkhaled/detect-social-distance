@@ -1,32 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-
-# In[1]:
-
+import pkg_resources
 import time
 import numpy as np
 import argparse
 import sys
 import cv2
 from math import pow, sqrt
-#print(os.getcwd())
 import os
 import sys
+
+
+
 cwd = os.getcwd()
-#time.sleep(60)
-
-print(cwd)
-#time.sleep(60)
-
-#raw_input()
-
 names_path=cwd+'/coco.names'
 w_path=cwd+'/yolov3.weights'
 cfg_path=cwd+'/yolov3.cfg'
 
-#print(names_path,cfg_path,w_path)
-#time.sleep(10)
+
 with open(names_path, 'r') as f:
     classes = [line.strip() for line in f.readlines()]
 
@@ -37,6 +27,11 @@ with open(names_path, 'r') as f:
     net = cv2.dnn.readNet(w_path,cfg_path )
 
 cap = cv2.VideoCapture(0)
+
+
+
+
+
 # function to get the output layer names 
 # in the architecture
 def get_output_layers(net):
@@ -46,6 +41,8 @@ def get_output_layers(net):
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
     return output_layers
+
+
 
 # function to draw bounding box on the detected object with class name
 def draw_bounding_box(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
@@ -57,19 +54,20 @@ def draw_bounding_box(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
     cv2.rectangle(img, (x,y), (x_plus_w,y_plus_h), color, 2)
 
     cv2.putText(img, label, (x-10,y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+
+
+
 def draw_bounding_box_v2(img, class_id, confidence, x, y, x_plus_w, y_plus_h,color):
-
-    #label = str(classes[class_id])
-
-    #color = COLORS[class_id]
 
     cv2.rectangle(img, (x,y), (x_plus_w,y_plus_h), color, 2)
 
-    #cv2.putText(img, label, (x-10,y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+
+
+
+
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
-
-out = cv2.VideoWriter('D:/outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame_width,frame_height))
+super_i=0
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -79,23 +77,16 @@ while cap.isOpened():
     Width = image.shape[1]
     Height = image.shape[0]
     scale = 0.00392
-    blob = cv2.dnn.blobFromImage(image, scale, (416,416), (0,0,0), True, crop=False)
+    blob = cv2.dnn.blobFromImage(image, scale, (416,416), (0,0,0), True, crop=False) #change size of image 
 
     # set input blob for the network
     net.setInput(blob)  
     
     
 
-    # read class names from text file
-    
-    
-    # function to get the output layer names 
-# in the architecture
-    
-
-        # run inference through the network
+    # run inference through the network
     # and gather predictions from output layers
-    outs = net.forward(get_output_layers(net))
+    outs = net.forward(get_output_layers(net)) 
 
     # initialization
     class_ids = []
@@ -106,7 +97,10 @@ while cap.isOpened():
 
     # for each detetion from each output layer 
     # get the confidence, class id, bounding box params
-    # and ignore weak detections (confidence < 0.5)
+    # and ignore weak detections (confidence < 0.5) 
+    # get height and width for each bounnday box , center x and center y
+    # push coordinates of boundary to boxes list
+
     for out in outs:
         for detection in out:
             scores = detection[5:]
@@ -126,7 +120,7 @@ while cap.isOpened():
 
         # apply non-max suppression
     indices = cv2.dnn.NMSBoxes(boxes, confidences, conf_threshold, nms_threshold)
-    pos_dict = dict()
+    
     coordinates = dict()
     # go through the detections remaining
     # after nms and draw bounding box
@@ -137,31 +131,33 @@ while cap.isOpened():
         y = box[1]
         w = box[2]
         h = box[3]
-
+        #draw boundary box 
         draw_bounding_box(image, class_ids[i], confidences[i], round(x), round(y), round(x+w), round(y+h))
-        F=615
-        distance = (175 * F)/h
+        
+        F=615 #Focal length 
+        distance = (175 * F)/h # get z distance (distance between every object and camera) , 175 its average height for person 
+
         print("Distance(cm):{dist}\n".format(dist=distance))
-        x_cm = (x * distance) / F
-        y_cm = (y * distance) / F
-        pos_dict[i] = (x_cm,y_cm,distance)
+        x_cm = (x * distance) / F #get actual x , after we have  distance from object and camera 
+        y_cm = (y * distance) / F# same above
+        coordinates[i] = (x_cm,y_cm,distance) #push real coordinates to pos_dict
     close_objects = set()
-    for i in pos_dict.keys():
-        for j in pos_dict.keys():
+    #claculate eculidian distance between all objects by rule :(sqrt((x1-x2)**2 + (y1-y2)**2 + (z1-z2)**2))
+    for i in coordinates.keys():
+        for j in coordinates.keys():
             if i < j:
-                dist = sqrt(pow(pos_dict[i][0]-pos_dict[j][0],2) + pow(pos_dict[i][1]-pos_dict[j][1],2) + pow(pos_dict[i][2]-pos_dict[j][2],2))
+                dist = sqrt(pow(coordinates[i][0]-coordinates[j][0],2) + pow(coordinates[i][1]-coordinates[j][1],2) + pow(coordinates[i][2]-coordinates[j][2],2))
                 print(dist)
                 # Check if distance less than 2 metres or 200 centimetres
                 if dist < 200:
                     close_objects.add(i)
                     close_objects.add(j)
-    for i in pos_dict.keys():
+    #change boundary box color (if dist less than 200cm so color will be red if , else will be green)
+    for i in coordinates.keys():
         if i in close_objects:
             COLOR = ([0,0,255])
         else:
             COLOR = ([0,255,0])
-       # (startX, startY, endX, endY) = coordinates[i]
-        #i = i[0]
         box = boxes[i]
         x = box[0]
         y = box[1]
@@ -169,19 +165,15 @@ while cap.isOpened():
         h = box[3]
 
         draw_bounding_box_v2(image, class_ids[i], confidences[i], round(x), round(y), round(x+w), round(y+h),COLOR)
-        #cv2.rectangle(frame, (startX, startY), (endX, endY), COLOR, 2)
-        #y = startY - 15 if startY - 15 > 15 else startY + 15
-        # Convert cms to feet
-        #cv2.putText(image, 'Depth: {i} ft'.format(i=round(pos_dict[i][2]/30.48,4)), (x, y),
-           #        cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLOR, 2)
-    # display o  
     cv2.namedWindow('Frame',cv2.WINDOW_AUTOSIZE)
 
     # Show frame
     #out.write(frame)
-
-    cv2.imshow('Frame', frame)
+    super_i=super_i+1
+    cv2.imwrite('frame/'+str(super_i)+'.jpg',frame)
+    cv2.imshow('Frame', frame) # show frames
     cv2.resizeWindow('Frame',800,600)
+    
 
     key = cv2.waitKey(1) & 0xFF
 
@@ -191,20 +183,9 @@ while cap.isOpened():
 
 # Clean
 cap.release()
-
 raw_input()
 
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
