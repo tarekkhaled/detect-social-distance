@@ -62,13 +62,6 @@ def draw_bounding_box_v2(img, class_id, confidence, x, y, x_plus_w, y_plus_h,col
     cv2.rectangle(img, (x,y), (x_plus_w,y_plus_h), color, 2)
 
 
-
-
-
-frame_width = int(cap.get(3))
-frame_height = int(cap.get(4))
-super_i=0
-
 while cap.isOpened():
     ret, frame = cap.read()
     # resize our captured frame if we need
@@ -169,8 +162,6 @@ while cap.isOpened():
 
     # Show frame
     #out.write(frame)
-    super_i=super_i+1
-    cv2.imwrite('frame/'+str(super_i)+'.jpg',frame)
     cv2.imshow('Frame', frame) # show frames
     cv2.resizeWindow('Frame',800,600)
     
