@@ -35,49 +35,34 @@ Distance between two objects = sqrt(pow(x1-x2,2)+pow(y1-y2,2)+pow(z1-z2,2))
 ```
 Then , check if distance between objects less than 1.8 m , boundary box color change from green to red 
 
-## Backend
-We use [Jupyter Kernel Gateway](https://github.com/jupyter/kernel_gateway) to convert jupyter 
-note book into a "REST API" and we use ......
+### Third Approach :
+In this approach we used an API called openpose along with opencv and other image processing methods.
 
+You could find a demo with some explanations and examples in this video: https://www.youtube.com/watch?v=d7-USTBZ8zE 
 
-### How to Install Jupyter Kernal Gateway ? _BACK-END_
+Openpose is an API which takes an image of people as input and turns the people into skeletons, the image is then sent to the jupyter notebook to measure the distance between the skeletons in the image.
 
-_before below commands make sure you are in "pyhton/scripts" directory_
-```
-pip install jupyter_kernel_gateway
-jupyter kernelgateway --generate-config
-```
+You can download openpose API from this link: https://github.com/CMU-Perceptual-Computing-Lab/openpose
 
+Here is an example:
 
-### How to Convert Jupyter notebook into REST API using Kernel Gateway ?
-_opening notebook and then we will add_
-```first cell
-import json
-```
+Input
+![Input](https://github.com/tarekkhaled/detect-social-distance/blob/master/Third%20Approach/ex1.png)
 
-```
-# Imitate REQUEST args (with debugging time, usually ignore)
-# REQUEST = json.dumps({'body': '', 'args': ''})
-```
-```
-# GET /detect/social/distance/ /*This will make route for requesting it */
+After downloading the openpose API, we put this image in the openpose/example/media folder and we open the windows command line in the root directory of the API and type this command:
 
-req = json.loads(REQUEST) /* REQUEST will be defiend globally by kernel gateway*/
-args = req['args]
+bin\OpenPoseDemo.exe --image_dir examples\media\ --disable_blending --write_images folder_path
 
-if 'start' not in args:
-    print(json.dumps({'start':None}))
-else:
-    // OUr main Code
-```
+The output image will be saved in the corresponding path.
 
-### How to running Jupyter notebook API ?
-_before below commands make sure you are in "pyhton/scripts" directory_
+Output
+![Output](https://github.com/tarekkhaled/detect-social-distance/blob/master/Third%20Approach/ex1_skeleton.png)  
 
-```
-jupyter kernelgateway --KernelGatewayApp.api='kernel_gateway.notebook_http' --KernelGatewayApp.seed_uri='./path of notebook like (notebook.ipynb)'
+The output image is then sent to this notebook: https://github.com/tarekkhaled/detect-social-distance/tree/master/Third%20Approach/Notebook
 
-```
+For this example the notebook will print the following output:
+Distances from left to right: [49.598810916347155, 50.53764212000384, 51.64349988977317, 48.35040470618683]
+Distances are in centimeters.
 
 # Contributors 
 [Alaa Atef](https://github.com/Alaa-Atef)
