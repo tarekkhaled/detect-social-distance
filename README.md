@@ -69,138 +69,138 @@ image                    shape: (675, 1200, 3)        min:    0.00000  max:  255
 molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
 image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64 <br /> 
 anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br /> 
-183.5560344827586 : 0   :  1
-406.0215517241379 : 0   :  2
-222.4655172413793 : 1   :  2
-![test 2 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_3.png)
+183.5560344827586 : 0   :  1 <br />
+406.0215517241379 : 0   :  2 <br />
+222.4655172413793 : 1   :  2 <br />
+![test 2 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_3.png) <br />
 
-Processing 1 images
-image                    shape: (500, 955, 3)         min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  150.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-141.60241874527588 : 0   :  1
-285.77475434618293 : 0   :  2
-406.30385487528343 : 0   :  3
-144.17233560090702 : 1   :  2
-264.70143613000755 : 1   :  3
-120.52910052910053 : 2   :  3
+Processing 1 images <br /> 
+image                    shape: (500, 955, 3)         min:    0.00000  max:  255.00000  uint8 <br /> 
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  150.10000  float64 <br /> 
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 <br /> 
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+141.60241874527588 : 0   :  1 <br /> 
+285.77475434618293 : 0   :  2 <br /> 
+406.30385487528343 : 0   :  3 <br /> 
+144.17233560090702 : 1   :  2 <br /> 
+264.70143613000755 : 1   :  3 <br />
+120.52910052910053 : 2   :  3 <br />
 
-![test 3 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_5.png)
+![test 3 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_5.png) <br />
 
-Processing 1 images
-image                    shape: (501, 752, 3)         min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-310.3341584158416 : 0   :  1
-605.940594059406 : 0   :  2
-905.7549504950496 : 0   :  3
-1337.0668316831684 : 0   :  4
-295.6064356435644 : 1   :  2
-595.4207920792079 : 1   :  3
-1026.7326732673268 : 1   :  4
-299.81435643564356 : 2   :  3
-731.1262376237624 : 2   :  4
-431.31188118811883 : 3   :  4
-![test 4 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_7.png)
+Processing 1 images <br />
+image                    shape: (501, 752, 3)         min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+310.3341584158416 : 0   :  1 <br />
+605.940594059406 : 0   :  2 <br />
+905.7549504950496 : 0   :  3 <br />
+1337.0668316831684 : 0   :  4 <br />
+295.6064356435644 : 1   :  2 <br />
+595.4207920792079 : 1   :  3 <br />
+1026.7326732673268 : 1   :  4 <br />
+299.81435643564356 : 2   :  3 <br />
+731.1262376237624 : 2   :  4 <br />
+431.31188118811883 : 3   :  4 <br />
+![test 4 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_7.png) <br />
 
-Processing 1 images
-image                    shape: (766, 1200, 3)        min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-100.71663019693655 : 0   :  1
-236.02844638949674 : 0   :  2
-354.04266958424506 : 0   :  3
-471.2199124726477 : 0   :  4
-563.8457330415755 : 0   :  5
-135.31181619256017 : 1   :  2
-253.32603938730853 : 1   :  3
-370.5032822757112 : 1   :  4
-463.12910284463896 : 1   :  5
-118.01422319474837 : 2   :  3
-235.191466083151 : 2   :  4
-327.8172866520788 : 2   :  5
-117.17724288840263 : 3   :  4
-209.8030634573304 : 3   :  5
-92.6258205689278 : 4   :  5
+Processing 1 images <br /> 
+image                    shape: (766, 1200, 3)        min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+100.71663019693655 : 0   :  1 <br />
+236.02844638949674 : 0   :  2 <br />
+354.04266958424506 : 0   :  3 <br />
+471.2199124726477 : 0   :  4 <br />
+563.8457330415755 : 0   :  5 <br />
+135.31181619256017 : 1   :  2 <br />
+253.32603938730853 : 1   :  3 <br />
+370.5032822757112 : 1   :  4 <br />
+463.12910284463896 : 1   :  5 <br />
+118.01422319474837 : 2   :  3 <br />
+235.191466083151 : 2   :  4 <br />
+327.8172866520788 : 2   :  5 <br />
+117.17724288840263 : 3   :  4 <br />
+209.8030634573304 : 3   :  5 <br />
+92.6258205689278 : 4   :  5 <br />
 
-![test 5 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_9.png)
+![test 5 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_9.png) <br />
 
-Processing 1 images
-image                    shape: (957, 1300, 3)        min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1300.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-38.871532453541604 : 0   :  1
-73.89711823323458 : 0   :  2
-108.51063829787233 : 0   :  3
-141.88796121734447 : 0   :  4
-172.51817936978185 : 0   :  5
-35.02558577969297 : 1   :  2
-69.63910584433073 : 1   :  3
-103.01642876380285 : 1   :  4
-133.64664691624023 : 1   :  5
-34.613520064637754 : 2   :  3
-67.99084298410988 : 2   :  4
-98.62106113654725 : 2   :  5
-33.37732291947212 : 3   :  4
-64.0075410719095 : 3   :  5
-30.63021815243738 : 4   :  5
-![test 6 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_11.png)
+Processing 1 images <br />
+image                    shape: (957, 1300, 3)        min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1300.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+38.871532453541604 : 0   :  1 <br />
+73.89711823323458 : 0   :  2 <br /> 
+108.51063829787233 : 0   :  3 <br />
+141.88796121734447 : 0   :  4 <br />
+172.51817936978185 : 0   :  5 <br />
+35.02558577969297 : 1   :  2 <br />
+69.63910584433073 : 1   :  3 <br />
+103.01642876380285 : 1   :  4 <br />
+133.64664691624023 : 1   :  5 <br />
+34.613520064637754 : 2   :  3 <br />
+67.99084298410988 : 2   :  4 <br />
+98.62106113654725 : 2   :  5 <br />
+33.37732291947212 : 3   :  4 <br />
+64.0075410719095 : 3   :  5 <br />
+30.63021815243738 : 4   :  5 <br />
+![test 6 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_11.png) <br />
 
-Processing 1 images
-image                    shape: (867, 1300, 3)        min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1300.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-52.325406381697775 : 0   :  1
-105.6742925948224 : 0   :  2
-156.72034918723662 : 0   :  3
-209.81336544250453 : 0   :  4
-53.34888621312463 : 1   :  2
-104.39494280553885 : 1   :  3
-157.48795906080676 : 1   :  4
-51.04605659241421 : 2   :  3
-104.13907284768213 : 2   :  4
-53.09301625526792 : 3   :  4
-![test 7 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_13.png)
+Processing 1 images <br />
+image                    shape: (867, 1300, 3)        min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1300.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+52.325406381697775 : 0   :  1 <br />
+105.6742925948224 : 0   :  2 <br />
+156.72034918723662 : 0   :  3 <br />
+209.81336544250453 : 0   :  4 <br />
+53.34888621312463 : 1   :  2 <br />
+104.39494280553885 : 1   :  3 <br />
+157.48795906080676 : 1   :  4 <br />
+51.04605659241421 : 2   :  3 <br />
+104.13907284768213 : 2   :  4 <br />
+53.09301625526792 : 3   :  4 <br />
+![test 7 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_13.png) <br />
 
-Processing 1 images
-image                    shape: (353, 612, 3)         min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-68.18596171376481 : 0   :  1
-140.09115770282588 : 0   :  2
-202.38833181403828 : 0   :  3
-71.90519598906107 : 1   :  2
-134.20237010027347 : 1   :  3
-62.2971741112124 : 2   :  3
-![test 8 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_15.png)
+Processing 1 images <br />
+image                    shape: (353, 612, 3)         min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+68.18596171376481 : 0   :  1 <br />
+140.09115770282588 : 0   :  2 <br />
+202.38833181403828 : 0   :  3 <br />
+71.90519598906107 : 1   :  2 <br />
+134.20237010027347 : 1   :  3 <br />
+62.2971741112124 : 2   :  3 <br />
+![test 8 ](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_15.png) <br />
 
-Processing 1 images
-image                    shape: (800, 1200, 3)        min:    0.00000  max:  255.00000  uint8
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
-image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
-59.364250614250615 : 0   :  1
-111.0534398034398 : 0   :  2
-163.2125307125307 : 0   :  3
-222.42014742014743 : 0   :  4
-279.90479115479116 : 0   :  5
-51.68918918918919 : 1   :  2
-103.8482800982801 : 1   :  3
-163.05589680589682 : 1   :  4
-220.54054054054055 : 1   :  5
-52.159090909090914 : 2   :  3
-111.36670761670761 : 2   :  4
-168.85135135135135 : 2   :  5
-59.20761670761671 : 3   :  4
-116.69226044226045 : 3   :  5
-57.48464373464374 : 4   :  5
-![test 9](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_17.png)
+Processing 1 images <br />
+image                    shape: (800, 1200, 3)        min:    0.00000  max:  255.00000  uint8 <br />
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 <br />
+image_metas              shape: (1, 93)               min:    0.00000  max: 1200.00000  float64 <br />
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 <br />
+59.364250614250615 : 0   :  1 <br />
+111.0534398034398 : 0   :  2 <br />
+163.2125307125307 : 0   :  3 <br />
+222.42014742014743 : 0   :  4 <br />
+279.90479115479116 : 0   :  5 <br />
+51.68918918918919 : 1   :  2 <br />
+103.8482800982801 : 1   :  3 <br />
+163.05589680589682 : 1   :  4 <br />
+220.54054054054055 : 1   :  5 <br />
+52.159090909090914 : 2   :  3 <br />
+111.36670761670761 : 2   :  4 <br />
+168.85135135135135 : 2   :  5 <br />
+59.20761670761671 : 3   :  4 <br />
+116.69226044226045 : 3   :  5 <br /> 
+57.48464373464374 : 4   :  5 <br />
+![test 9](https://github.com/tarekkhaled/detect-social-distance/blob/master/output_4_17.png) <br />
 
 
 ### Third Approach :
