@@ -6,6 +6,10 @@ In our project, we want to help organizations to which a great number people go 
 These people stand in queues until their turn comes. These queues must not violate the social distancing rules.
 Using a camera, a computer and image processing techniques we try to monitor the distances between people and release warnings if this distance is violated.
 
+### More than one approch :
+we have tried three different approchs .
+every approch will be covered in detials . 
+
 
 ### First Approach :
 We use yolo3 for object detection , Yolo return boxes have (width, height) ,(center x , center y) for every boundary box .
@@ -34,6 +38,32 @@ Now we have Z for each object , (x , y) (from yolo) , by calculating Euclidean d
 Distance between two objects = sqrt(pow(x1-x2,2)+pow(y1-y2,2)+pow(z1-z2,2))
 ```
 Then , check if distance between objects less than 1.8 m , boundary box color change from green to red 
+
+### Second  Approach :
+In this approach we test images captured from camera and  use maskrcnn for object segmentation .
+
+_Note :: for testing you should download mask_rcnn.h5 file from this link :https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5 , place it in approach2 folder  , check paths in notebook before running.
+
+#### Idea :
+we use mask rcnn for object segmentation , then check class and get coordinates for each object has class person.
+then we compute all object heights and average of their height , and compare it with with average height of people (170cm)
+now, we have ratio between real distance , and distance in image , so we calculate distance between objects in image and multiply with ratio we get real distance between all objects
+then check distance if less than 1.8 m , we draw red boundary box  ,if more than 1.8m , draw green boundary box .
+
+#### testcases and output :
+Processing 1 images
+image                    shape: (653, 980, 3)         min:    0.00000  max:  255.00000  uint8
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32
+233.4390243902439 : 0   :  1
+514.560975609756 : 0   :  2
+682.9024390243902 : 0   :  3
+281.1219512195122 : 1   :  2
+449.4634146341463 : 1   :  3
+168.34146341463415 : 2   :  3
+
+
 
 ### Third Approach :
 In this approach we used an API called openpose along with opencv and other image processing methods.
