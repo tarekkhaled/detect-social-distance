@@ -223,7 +223,7 @@ bin\OpenPoseDemo.exe --image_dir examples\media\ --disable_blending --write_imag
 
 The output image will be saved in the corresponding path.
 
-Output
+# Output
 ![Output](https://github.com/tarekkhaled/detect-social-distance/blob/master/Third%20Approach/ex1_skeleton.png)  
 
 The output image is then sent to this notebook: https://github.com/tarekkhaled/detect-social-distance/tree/master/Third%20Approach/Notebook
