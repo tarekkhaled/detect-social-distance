@@ -15,7 +15,7 @@ every approch will be covered in detials .
 We use yolo3 for object detection , Yolo return boxes have (width, height) ,(center x , center y) for every boundary box .
 
 '''
-_Note :: for testing you should download (yolo3.weights) from this link: https://pjreddie.com/media/files/yolov3.weights , and locate it in approach1/backend , then open App.exe 
+_Note :: for testing you should download (yolo3.weights) from this link: https://pjreddie.com/media/files/yolov3.weights , and locate it in backend , then open App.exe 
 '''
 #### Calibration :
 
