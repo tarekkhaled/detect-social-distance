@@ -6,8 +6,8 @@ In our project, we want to help organizations to which a great number people go 
 These people stand in queues until their turn comes. These queues must not violate the social distancing rules.
 Using a camera, a computer and image processing techniques we try to monitor the distances between people and release warnings if this distance is violated.
 
-### More than one approch :
-we have tried three different approchs .
+### More than one approach :
+we have tried three different approachs .
 every approch will be covered in detials . 
 
 
