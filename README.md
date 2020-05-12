@@ -51,11 +51,11 @@ now, we have ratio between real distance , and distance in image , so we calcula
 then check distance if less than 1.8 m , we draw red boundary box  ,if more than 1.8m , draw green boundary box .
 
 #### testcases and output :
-Processing 1 images \
-image                    shape: (653, 980, 3)         min:    0.00000  max:  255.00000  uint8 \
-molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 \
-image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64\ 
-anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32\ 
+Processing 1 images \n
+image                    shape: (653, 980, 3)         min:    0.00000  max:  255.00000  uint8 \n
+molded_images            shape: (1, 1024, 1024, 3)    min: -123.70000  max:  151.10000  float64 \n
+image_metas              shape: (1, 93)               min:    0.00000  max: 1024.00000  float64 \n 
+anchors                  shape: (1, 261888, 4)        min:   -0.35390  max:    1.29134  float32 \n 
 233.4390243902439 : 0   :  1 \ 
 514.560975609756 : 0   :  2 \ 
 682.9024390243902 : 0   :  3 \ 
