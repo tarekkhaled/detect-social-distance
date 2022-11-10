@@ -9,7 +9,7 @@
     "start": "electron ."
   },
   "dependencies": {
-    "electron": "^8.2.5",
+    "electron": "^18.3.7",
     "open": "^7.0.3"
   }
 }
